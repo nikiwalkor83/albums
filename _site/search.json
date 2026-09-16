@@ -14,10 +14,17 @@
     "text": "We normally experience music through sound. What happens when we turn the visual artwork surrounding music into data?"
   },
   {
+    "objectID": "index.html#visual-map-brightness-vs.-saturation",
+    "href": "index.html#visual-map-brightness-vs.-saturation",
+    "title": "What Does Music Look Like?",
+    "section": "Visual Map: Brightness vs. Saturation",
+    "text": "Visual Map: Brightness vs. Saturation\nIf we cannot hear the music, can we see patterns in its artwork? Here we plot each cover’s Brightness (dark to light) against its Saturation (grayscale to vivid). Hover over any point to inspect the album."
+  },
+  {
     "objectID": "index.html#album-explorer",
     "href": "index.html#album-explorer",
     "title": "What Does Music Look Like?",
     "section": "Album Explorer",
-    "text": "Album Explorer\nExplore album covers across genres and decades.\n\n\n\n\nBlue TrainJohn Coltrane1958 • Jazz\n\n\n\n\n\nKind of BlueMiles Davis1959 • Jazz\n\n\n\n\n\nTime OutThe Dave Brubeck Quartet1959 • Jazz\n\n\n\n\n\nAbbey RoadThe Beatles1969 • Rock\n\n\n\n\n\nLed Zeppelin IVLed Zeppelin1971 • Rock\n\n\n\n\n\nThe Dark Side of the MoonPink Floyd1973 • Rock\n\n\n\n\n\nThrillerMichael Jackson1982 • Pop\n\n\n\n\n\n1999Prince1982 • Pop\n\n\n\n\n\nTrue BlueMadonna1986 • Pop\n\n\n\n\n\nThe Low End TheoryA Tribe Called Quest1991 • Hip-Hop\n\n\n\n\n\nSelected Ambient Works 85-92Aphex Twin1992 • Electronic\n\n\n\n\n\nIllmaticNas1994 • Hip-Hop\n\n\n\n\n\nDig Your Own HoleThe Chemical Brothers1997 • Electronic\n\n\n\n\n\nMezzanineMassive Attack1998 • Electronic\n\n\n\n\n\nStankoniaOutKast2000 • Hip-Hop"
+    "text": "Album Explorer\nExplore album covers across genres and decades.\n\n\n\n\nAbbey RoadThe Beatles1969 • Rock\n\n\n\n\n\nThe Dark Side of the MoonPink Floyd1973 • Rock\n\n\n\n\n\nNevermindNirvana1991 • Rock\n\n\n\n\n\nOK ComputerRadiohead1997 • Rock\n\n\n\n\n\nThrillerMichael Jackson1982 • Pop\n\n\n\n\n\nLike a VirginMadonna1984 • Pop\n\n\n\n\n\n…Baby One More TimeBritney Spears1999 • Pop\n\n\n\n\n\nFuture NostalgiaDua Lipa2020 • Pop\n\n\n\n\n\nIllmaticNas1994 • Hip-Hop\n\n\n\n\n\nReady to DieThe Notorious B.I.G.1994 • Hip-Hop\n\n\n\n\n\nGraduationKanye West2007 • Hip-Hop\n\n\n\n\n\nTo Pimp a ButterflyKendrick Lamar2015 • Hip-Hop\n\n\n\n\n\nKind of BlueMiles Davis1959 • Jazz\n\n\n\n\n\nA Love SupremeJohn Coltrane1965 • Jazz\n\n\n\n\n\nTime OutDave Brubeck1959 • Jazz\n\n\n\n\n\nThe EpicKamasi Washington2015 • Jazz\n\n\n\n\n\nDiscoveryDaft Punk2001 • Electronic\n\n\n\n\n\nTrans-Europe ExpressKraftwerk1977 • Electronic\n\n\n\n\n\nSelected Ambient Works 85-92Aphex Twin1992 • Electronic\n\n\n\n\n\nCrossJustice2007 • Electronic\n\n\n\n\n\nParanoidBlack Sabbath1970 • Metal\n\n\n\n\n\nMaster of PuppetsMetallica1986 • Metal\n\n\n\n\n\nThe Number of the BeastIron Maiden1982 • Metal\n\n\n\n\n\nToxicitySystem of a Down2001 • Metal"
   }
 ]

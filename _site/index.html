@@ -73,6 +73,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.12.1/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -119,7 +128,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#album-explorer" id="toc-album-explorer" class="nav-link active" data-scroll-target="#album-explorer">Album Explorer</a></li>
+  <li><a href="#visual-map-brightness-vs.-saturation" id="toc-visual-map-brightness-vs.-saturation" class="nav-link active" data-scroll-target="#visual-map-brightness-vs.-saturation">Visual Map: Brightness vs.&nbsp;Saturation</a></li>
+  <li><a href="#album-explorer" id="toc-album-explorer" class="nav-link" data-scroll-target="#album-explorer">Album Explorer</a></li>
   </ul>
 </nav>
     </div>
@@ -146,103 +156,167 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>We normally experience music through sound. What happens when we turn the visual artwork surrounding music into data?</p>
+<section id="visual-map-brightness-vs.-saturation" class="level2">
+<h2 class="anchored" data-anchor-id="visual-map-brightness-vs.-saturation">Visual Map: Brightness vs.&nbsp;Saturation</h2>
+<p>If we cannot hear the music, can we see patterns in its artwork? Here we plot each cover’s <strong>Brightness</strong> (dark to light) against its <strong>Saturation</strong> (grayscale to vivid). Hover over any point to inspect the album.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-6a7a56a3993c2830aec2" style="width:100%;height:397px;"></div>
+<script type="application/json" data-for="htmlwidget-6a7a56a3993c2830aec2">{"x":{"data":[{"x":[0.113,0.127,0.70899999999999996,0.036999999999999998],"y":[0.46600000000000003,0,0,0.78200000000000003],"text":["<b>Discovery<\/b><br>Daft Punk (2001)<br>Genre: Electronic<br>Brightness: 11.3%<br>Saturation: 46.6%","<b>Trans-Europe Express<\/b><br>Kraftwerk (1977)<br>Genre: Electronic<br>Brightness: 12.7%<br>Saturation: 0.0%","<b>Selected Ambient Works 85-92<\/b><br>Aphex Twin (1992)<br>Genre: Electronic<br>Brightness: 70.9%<br>Saturation: 0.0%","<b>Cross<\/b><br>Justice (2007)<br>Genre: Electronic<br>Brightness: 3.7%<br>Saturation: 78.2%"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":0.84999999999999998,"size":13.228346456692915,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"Electronic","legendgroup":"Electronic","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.36299999999999999,0.94699999999999995,0.45800000000000002,0.57199999999999995],"y":[0.35699999999999998,0.029999999999999999,0.47799999999999998,0.025999999999999999],"text":["<b>Illmatic<\/b><br>Nas (1994)<br>Genre: Hip-Hop<br>Brightness: 36.3%<br>Saturation: 35.7%","<b>Ready to Die<\/b><br>The Notorious B.I.G. (1994)<br>Genre: Hip-Hop<br>Brightness: 94.7%<br>Saturation: 3.0%","<b>Graduation<\/b><br>Kanye West (2007)<br>Genre: Hip-Hop<br>Brightness: 45.8%<br>Saturation: 47.8%","<b>To Pimp a Butterfly<\/b><br>Kendrick Lamar (2015)<br>Genre: Hip-Hop<br>Brightness: 57.2%<br>Saturation: 2.6%"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(183,159,0,1)","opacity":0.84999999999999998,"size":13.228346456692915,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(183,159,0,1)"}},"hoveron":"points","name":"Hip-Hop","legendgroup":"Hip-Hop","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.17000000000000001,0.35199999999999998,0.58699999999999997,0.39300000000000002],"y":[0.11600000000000001,0.044999999999999998,0.28699999999999998,0],"text":["<b>Kind of Blue<\/b><br>Miles Davis (1959)<br>Genre: Jazz<br>Brightness: 17.0%<br>Saturation: 11.6%","<b>A Love Supreme<\/b><br>John Coltrane (1965)<br>Genre: Jazz<br>Brightness: 35.2%<br>Saturation: 4.5%","<b>Time Out<\/b><br>Dave Brubeck (1959)<br>Genre: Jazz<br>Brightness: 58.7%<br>Saturation: 28.7%","<b>The Epic<\/b><br>Kamasi Washington (2015)<br>Genre: Jazz<br>Brightness: 39.3%<br>Saturation: 0.0%"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":0.84999999999999998,"size":13.228346456692915,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)"}},"hoveron":"points","name":"Jazz","legendgroup":"Jazz","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.161,0.315,0.377,0.107],"y":[0.33800000000000002,0.55100000000000005,0.28399999999999997,0.13300000000000001],"text":["<b>Paranoid<\/b><br>Black Sabbath (1970)<br>Genre: Metal<br>Brightness: 16.1%<br>Saturation: 33.8%","<b>Master of Puppets<\/b><br>Metallica (1986)<br>Genre: Metal<br>Brightness: 31.5%<br>Saturation: 55.1%","<b>The Number of the Beast<\/b><br>Iron Maiden (1982)<br>Genre: Metal<br>Brightness: 37.7%<br>Saturation: 28.4%","<b>Toxicity<\/b><br>System of a Down (2001)<br>Genre: Metal<br>Brightness: 10.7%<br>Saturation: 13.3%"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":0.84999999999999998,"size":13.228346456692915,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,191,196,1)"}},"hoveron":"points","name":"Metal","legendgroup":"Metal","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.45500000000000002,0.46800000000000003,0.64700000000000002,0.28999999999999998],"y":[0.193,0.23100000000000001,0.372,0.441],"text":["<b>Thriller<\/b><br>Michael Jackson (1982)<br>Genre: Pop<br>Brightness: 45.5%<br>Saturation: 19.3%","<b>Like a Virgin<\/b><br>Madonna (1984)<br>Genre: Pop<br>Brightness: 46.8%<br>Saturation: 23.1%","<b>...Baby One More Time<\/b><br>Britney Spears (1999)<br>Genre: Pop<br>Brightness: 64.7%<br>Saturation: 37.2%","<b>Future Nostalgia<\/b><br>Dua Lipa (2020)<br>Genre: Pop<br>Brightness: 29.0%<br>Saturation: 44.1%"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":0.84999999999999998,"size":13.228346456692915,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)"}},"hoveron":"points","name":"Pop","legendgroup":"Pop","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.40600000000000003,0.96199999999999997,0.53800000000000003,0.85699999999999998],"y":[0.28299999999999997,0.034000000000000002,0.24099999999999999,0.11],"text":["<b>Abbey Road<\/b><br>The Beatles (1969)<br>Genre: Rock<br>Brightness: 40.6%<br>Saturation: 28.3%","<b>The Dark Side of the Moon<\/b><br>Pink Floyd (1973)<br>Genre: Rock<br>Brightness: 96.2%<br>Saturation: 3.4%","<b>Nevermind<\/b><br>Nirvana (1991)<br>Genre: Rock<br>Brightness: 53.8%<br>Saturation: 24.1%","<b>OK Computer<\/b><br>Radiohead (1997)<br>Genre: Rock<br>Brightness: 85.7%<br>Saturation: 11.0%"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(245,100,227,1)","opacity":0.84999999999999998,"size":13.228346456692915,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(245,100,227,1)"}},"hoveron":"points","name":"Rock","legendgroup":"Rock","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.098381070983812,"r":7.9701120797011216,"b":40.647571606475722,"l":53.399750933997524},"paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241},"title":{"text":"<b> Visual Map: Brightness vs. Saturation by Genre <\/b>","font":{"color":"rgba(0,0,0,1)","family":"","size":19.128268991282692},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.050000000000000003,1.05],"tickmode":"array","ticktext":["0%","25%","50%","75%","100%"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0%","25%","50%","75%","100%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.9850560398505603,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.72455564360919278,"zeroline":false,"anchor":"y","title":{"text":"Brightness (0% = Dark, 100% = Light)","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.050000000000000003,1.05],"tickmode":"array","ticktext":["0%","25%","50%","75%","100%"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0%","25%","50%","75%","100%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.9850560398505608,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":12.7521793275218},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.72455564360919289,"zeroline":false,"anchor":"x","title":{"text":"Saturation (0% = Muted, 100% = Vivid)","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241}},"hoverformat":".2f"},"shapes":[],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":12.7521793275218},"title":{"text":"Genre","font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402241}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"92d2756f1a2c":{"x":{},"y":{},"colour":{},"text":{},"type":"scatter"}},"cur_data":"92d2756f1a2c","visdat":{"92d2756f1a2c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
 <section id="album-explorer" class="level2">
 <h2 class="anchored" data-anchor-id="album-explorer">Album Explorer</h2>
 <p>Explore album covers across genres and decades.</p>
 <div class="album-grid">
 <div class="grid-card">
-<img src="https://coverartarchive.org/release-group/c63baaaa-10c0-4b86-ad7e-1f39d7e2eccc/front-500" alt="Blue Train" loading="lazy">
-<div class="grid-info">
-<strong>Blue Train</strong><span>John Coltrane</span><small>1958 • Jazz</small>
-</div>
-</div>
-<div class="grid-card">
-<img src="https://coverartarchive.org/release-group/8e8a594f-2175-38c7-a871-abb68ec363e7/front-500" alt="Kind of Blue" loading="lazy">
-<div class="grid-info">
-<strong>Kind of Blue</strong><span>Miles Davis</span><small>1959 • Jazz</small>
-</div>
-</div>
-<div class="grid-card">
-<img src="https://coverartarchive.org/release-group/035a7881-3e2c-39d2-b110-fe26a4de94e5/front-500" alt="Time Out" loading="lazy">
-<div class="grid-info">
-<strong>Time Out</strong><span>The Dave Brubeck Quartet</span><small>1959 • Jazz</small>
-</div>
-</div>
-<div class="grid-card">
-<img src="https://coverartarchive.org/release-group/9162580e-5df4-32de-80cc-f45a8d8a9b1d/front-500" alt="Abbey Road" loading="lazy">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/48/53/43/485343e3-dd6a-0034-faec-f4b6403f8108/13UMGIM63890.rgb.jpg/600x600bb.jpg" alt="Abbey Road" loading="lazy">
 <div class="grid-info">
 <strong>Abbey Road</strong><span>The Beatles</span><small>1969 • Rock</small>
 </div>
 </div>
 <div class="grid-card">
-<img src="https://coverartarchive.org/release-group/2e61da88-39e9-3473-81d2-c964cb394952/front-500" alt="Led Zeppelin IV" loading="lazy">
-<div class="grid-info">
-<strong>Led Zeppelin IV</strong><span>Led Zeppelin</span><small>1971 • Rock</small>
-</div>
-</div>
-<div class="grid-card">
-<img src="https://coverartarchive.org/release-group/f5093c06-23e3-404f-aeaa-40f72885ee3a/front-500" alt="The Dark Side of the Moon" loading="lazy">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3e/17/ec/3e17ec6d-f980-c64f-19e0-a6fd8bbf0c10/886445635850.jpg/600x600bb.jpg" alt="The Dark Side of the Moon" loading="lazy">
 <div class="grid-info">
 <strong>The Dark Side of the Moon</strong><span>Pink Floyd</span><small>1973 • Rock</small>
 </div>
 </div>
 <div class="grid-card">
-<img src="https://coverartarchive.org/release-group/3a7817b5-22cb-32c3-a31b-2c8309fbf92e/front-500" alt="Thriller" loading="lazy">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/19/7a/58/197a5870-618b-446f-a193-ca4a84502adc/190295781163.jpg/600x600bb.jpg" alt="Nevermind" loading="lazy">
+<div class="grid-info">
+<strong>Nevermind</strong><span>Nirvana</span><small>1991 • Rock</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/60/ba/0760ba0f-148c-b18f-d0ff-169ee96f3af5/634904078164.png/600x600bb.jpg" alt="OK Computer" loading="lazy">
+<div class="grid-info">
+<strong>OK Computer</strong><span>Radiohead</span><small>1997 • Rock</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/600x600bb.jpg" alt="Thriller" loading="lazy">
 <div class="grid-info">
 <strong>Thriller</strong><span>Michael Jackson</span><small>1982 • Pop</small>
 </div>
 </div>
 <div class="grid-card">
-<img src="https://coverartarchive.org/release-group/efc58986-193a-3cb2-9b81-abf8f29a6903/front-500" alt="1999" loading="lazy">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/8e/80/32/8e803264-c925-14dd-3412-2d7652c3df7b/mzi.wxptosaa.jpg/600x600bb.jpg" alt="Like a Virgin" loading="lazy">
 <div class="grid-info">
-<strong>1999</strong><span>Prince</span><small>1982 • Pop</small>
+<strong>Like a Virgin</strong><span>Madonna</span><small>1984 • Pop</small>
 </div>
 </div>
 <div class="grid-card">
-<img src="https://coverartarchive.org/release-group/91b6d637-d90b-356e-8c46-3face911be82/front-500" alt="True Blue" loading="lazy">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/51/73/28/5173280b-9b5e-c5e4-d3f8-a2612d044543/888880423368.jpg/600x600bb.jpg" alt="...Baby One More Time" loading="lazy">
 <div class="grid-info">
-<strong>True Blue</strong><span>Madonna</span><small>1986 • Pop</small>
+<strong>…Baby One More Time</strong><span>Britney Spears</span><small>1999 • Pop</small>
 </div>
 </div>
 <div class="grid-card">
-<img src="https://coverartarchive.org/release-group/c3733436-fcba-3c08-b082-d548df5c5139/front-500" alt="The Low End Theory" loading="lazy">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/e9/c5/a8/e9c5a8a0-d698-137b-2e85-cf3a8d9548f8/190295303372.jpg/600x600bb.jpg" alt="Future Nostalgia" loading="lazy">
 <div class="grid-info">
-<strong>The Low End Theory</strong><span>A Tribe Called Quest</span><small>1991 • Hip-Hop</small>
+<strong>Future Nostalgia</strong><span>Dua Lipa</span><small>2020 • Pop</small>
 </div>
 </div>
 <div class="grid-card">
-<img src="https://coverartarchive.org/release-group/6842c81d-ea77-3dfd-abf7-4323add3f4d4/front-500" alt="Selected Ambient Works 85-92" loading="lazy">
-<div class="grid-info">
-<strong>Selected Ambient Works 85-92</strong><span>Aphex Twin</span><small>1992 • Electronic</small>
-</div>
-</div>
-<div class="grid-card">
-<img src="https://coverartarchive.org/release-group/28298e2c-4d70-3eed-a0f5-a3280c662b3d/front-500" alt="Illmatic" loading="lazy">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/b9/eb/cc/b9ebccbc-5ba4-2cdb-5332-b065739abd9a/886444567619.jpg/600x600bb.jpg" alt="Illmatic" loading="lazy">
 <div class="grid-info">
 <strong>Illmatic</strong><span>Nas</span><small>1994 • Hip-Hop</small>
 </div>
 </div>
 <div class="grid-card">
-<img src="https://coverartarchive.org/release-group/69f4aa7f-d760-3890-bd2a-902fb9abe40b/front-500" alt="Dig Your Own Hole" loading="lazy">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f8/6a/3d/f86a3db0-d518-cd49-c0c9-25e767ae0a6d/075679456861.jpg/600x600bb.jpg" alt="Ready to Die" loading="lazy">
 <div class="grid-info">
-<strong>Dig Your Own Hole</strong><span>The Chemical Brothers</span><small>1997 • Electronic</small>
+<strong>Ready to Die</strong><span>The Notorious B.I.G.</span><small>1994 • Hip-Hop</small>
 </div>
 </div>
 <div class="grid-card">
-<img src="https://coverartarchive.org/release-group/6f9f6899-c0d3-311d-ae87-a10ae6bc53a9/front-500" alt="Mezzanine" loading="lazy">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/39/25/2d/39252d65-2d50-b991-0962-f7a98a761271/00602517483507.rgb.jpg/600x600bb.jpg" alt="Graduation" loading="lazy">
 <div class="grid-info">
-<strong>Mezzanine</strong><span>Massive Attack</span><small>1998 • Electronic</small>
+<strong>Graduation</strong><span>Kanye West</span><small>2007 • Hip-Hop</small>
 </div>
 </div>
 <div class="grid-card">
-<img src="https://coverartarchive.org/release-group/00d2cd53-21c9-3738-b683-56847b7b0040/front-500" alt="Stankonia" loading="lazy">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b5/a6/91/b5a69171-5232-3d5b-9c15-8963802f83dd/15UMGIM15814.rgb.jpg/600x600bb.jpg" alt="To Pimp a Butterfly" loading="lazy">
 <div class="grid-info">
-<strong>Stankonia</strong><span>OutKast</span><small>2000 • Hip-Hop</small>
+<strong>To Pimp a Butterfly</strong><span>Kendrick Lamar</span><small>2015 • Hip-Hop</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music/7f/9f/d6/mzi.vtnaewef.jpg/600x600bb.jpg" alt="Kind of Blue" loading="lazy">
+<div class="grid-info">
+<strong>Kind of Blue</strong><span>Miles Davis</span><small>1959 • Jazz</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e5/24/aa/e524aacd-467b-66f3-8931-0fcd6750a4b9/08UMGIM07914.rgb.jpg/600x600bb.jpg" alt="A Love Supreme" loading="lazy">
+<div class="grid-info">
+<strong>A Love Supreme</strong><span>John Coltrane</span><small>1965 • Jazz</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/39/da/45/39da45ea-0a55-8668-0a84-4017b45fb13e/dj.rzbgoyft.jpg/600x600bb.jpg" alt="Time Out" loading="lazy">
+<div class="grid-info">
+<strong>Time Out</strong><span>Dave Brubeck</span><small>1959 • Jazz</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/ee/f3/42/eef342b0-6024-1bb3-15db-426aa5ee1eb8/kw_1400.jpg/600x600bb.jpg" alt="The Epic" loading="lazy">
+<div class="grid-info">
+<strong>The Epic</strong><span>Kamasi Washington</span><small>2015 • Jazz</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fd/4a/77/fd4a77db-0ebc-d043-41a2-f32fa1bb0fb4/dj.qrikkdwj.jpg/600x600bb.jpg" alt="Discovery" loading="lazy">
+<div class="grid-info">
+<strong>Discovery</strong><span>Daft Punk</span><small>2001 • Electronic</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/80/bc/e280bcf9-4048-8c42-2b6b-d8b9c9bbed52/5099996602058_1500x1500_300dpi.jpg/600x600bb.jpg" alt="Trans-Europe Express" loading="lazy">
+<div class="grid-info">
+<strong>Trans-Europe Express</strong><span>Kraftwerk</span><small>1977 • Electronic</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5f/b3/e0/5fb3e08d-c2cd-3da4-6ad7-c5dc61803683/cover.jpg/600x600bb.jpg" alt="Selected Ambient Works 85-92" loading="lazy">
+<div class="grid-info">
+<strong>Selected Ambient Works 85-92</strong><span>Aphex Twin</span><small>1992 • Electronic</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/62/e4/01/62e40187-e672-17e5-f31f-9aee262703a3/mzi.bifzeufu.jpg/600x600bb.jpg" alt="Cross" loading="lazy">
+<div class="grid-info">
+<strong>Cross</strong><span>Justice</span><small>2007 • Electronic</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/be/27/91/be279120-2285-16c6-c7ba-9d6643d4a948/075992732727.jpg/600x600bb.jpg" alt="Paranoid" loading="lazy">
+<div class="grid-info">
+<strong>Paranoid</strong><span>Black Sabbath</span><small>1970 • Metal</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0b/ae/59/0bae59f6-5ab8-3701-0446-a1ae31f9a5e6/9143_300dpi.jpg/600x600bb.jpg" alt="Master of Puppets" loading="lazy">
+<div class="grid-info">
+<strong>Master of Puppets</strong><span>Metallica</span><small>1986 • Metal</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1d/cb/ac/1dcbac1b-737d-b7c8-8bed-b5a98ae9df77/0881034134448.jpg/600x600bb.jpg" alt="The Number of the Beast" loading="lazy">
+<div class="grid-info">
+<strong>The Number of the Beast</strong><span>Iron Maiden</span><small>1982 • Metal</small>
+</div>
+</div>
+<div class="grid-card">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/83/68/f1/8368f10d-70d0-a968-69c2-0835dddf76d2/886448869788.jpg/600x600bb.jpg" alt="Toxicity" loading="lazy">
+<div class="grid-info">
+<strong>Toxicity</strong><span>System of a Down</span><small>2001 • Metal</small>
 </div>
 </div>
 </div>
 <script>
-  window.ALBUM_DATA = [{"title":"Blue Train","artist":"John Coltrane","year":1958,"decade":"1950s","genre":"Jazz","cover_url":"https://coverartarchive.org/release-group/c63baaaa-10c0-4b86-ad7e-1f39d7e2eccc/front-500"},{"title":"Kind of Blue","artist":"Miles Davis","year":1959,"decade":"1950s","genre":"Jazz","cover_url":"https://coverartarchive.org/release-group/8e8a594f-2175-38c7-a871-abb68ec363e7/front-500"},{"title":"Time Out","artist":"The Dave Brubeck Quartet","year":1959,"decade":"1950s","genre":"Jazz","cover_url":"https://coverartarchive.org/release-group/035a7881-3e2c-39d2-b110-fe26a4de94e5/front-500"},{"title":"Abbey Road","artist":"The Beatles","year":1969,"decade":"1960s","genre":"Rock","cover_url":"https://coverartarchive.org/release-group/9162580e-5df4-32de-80cc-f45a8d8a9b1d/front-500"},{"title":"Led Zeppelin IV","artist":"Led Zeppelin","year":1971,"decade":"1970s","genre":"Rock","cover_url":"https://coverartarchive.org/release-group/2e61da88-39e9-3473-81d2-c964cb394952/front-500"},{"title":"The Dark Side of the Moon","artist":"Pink Floyd","year":1973,"decade":"1970s","genre":"Rock","cover_url":"https://coverartarchive.org/release-group/f5093c06-23e3-404f-aeaa-40f72885ee3a/front-500"},{"title":"Thriller","artist":"Michael Jackson","year":1982,"decade":"1980s","genre":"Pop","cover_url":"https://coverartarchive.org/release-group/3a7817b5-22cb-32c3-a31b-2c8309fbf92e/front-500"},{"title":"1999","artist":"Prince","year":1982,"decade":"1980s","genre":"Pop","cover_url":"https://coverartarchive.org/release-group/efc58986-193a-3cb2-9b81-abf8f29a6903/front-500"},{"title":"True Blue","artist":"Madonna","year":1986,"decade":"1980s","genre":"Pop","cover_url":"https://coverartarchive.org/release-group/91b6d637-d90b-356e-8c46-3face911be82/front-500"},{"title":"The Low End Theory","artist":"A Tribe Called Quest","year":1991,"decade":"1990s","genre":"Hip-Hop","cover_url":"https://coverartarchive.org/release-group/c3733436-fcba-3c08-b082-d548df5c5139/front-500"},{"title":"Selected Ambient Works 85-92","artist":"Aphex Twin","year":1992,"decade":"1990s","genre":"Electronic","cover_url":"https://coverartarchive.org/release-group/6842c81d-ea77-3dfd-abf7-4323add3f4d4/front-500"},{"title":"Illmatic","artist":"Nas","year":1994,"decade":"1990s","genre":"Hip-Hop","cover_url":"https://coverartarchive.org/release-group/28298e2c-4d70-3eed-a0f5-a3280c662b3d/front-500"},{"title":"Dig Your Own Hole","artist":"The Chemical Brothers","year":1997,"decade":"1990s","genre":"Electronic","cover_url":"https://coverartarchive.org/release-group/69f4aa7f-d760-3890-bd2a-902fb9abe40b/front-500"},{"title":"Mezzanine","artist":"Massive Attack","year":1998,"decade":"1990s","genre":"Electronic","cover_url":"https://coverartarchive.org/release-group/6f9f6899-c0d3-311d-ae87-a10ae6bc53a9/front-500"},{"title":"Stankonia","artist":"OutKast","year":2000,"decade":"2000s","genre":"Hip-Hop","cover_url":"https://coverartarchive.org/release-group/00d2cd53-21c9-3738-b683-56847b7b0040/front-500"}];
+  window.ALBUM_DATA = [{"title":"Abbey Road","artist":"The Beatles","genre":"Rock","year":1969,"decade":1960,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/48/53/43/485343e3-dd6a-0034-faec-f4b6403f8108/13UMGIM63890.rgb.jpg/600x600bb.jpg","brightness":0.406,"saturation":0.283,"pct_dark":26.5,"pct_light":14.8,"dominant_color":"#5c6c6c"},{"title":"The Dark Side of the Moon","artist":"Pink Floyd","genre":"Rock","year":1973,"decade":1970,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3e/17/ec/3e17ec6d-f980-c64f-19e0-a6fd8bbf0c10/886445635850.jpg/600x600bb.jpg","brightness":0.962,"saturation":0.034,"pct_dark":0,"pct_light":95.6,"dominant_color":"#f8f4f5"},{"title":"Nevermind","artist":"Nirvana","genre":"Rock","year":1991,"decade":1990,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/19/7a/58/197a5870-618b-446f-a193-ca4a84502adc/190295781163.jpg/600x600bb.jpg","brightness":0.538,"saturation":0.241,"pct_dark":4.7,"pct_light":6.2,"dominant_color":"#8686a2"},{"title":"OK Computer","artist":"Radiohead","genre":"Rock","year":1997,"decade":1990,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/60/ba/0760ba0f-148c-b18f-d0ff-169ee96f3af5/634904078164.png/600x600bb.jpg","brightness":0.857,"saturation":0.11,"pct_dark":0.7,"pct_light":70.8,"dominant_color":"#d1dde5"},{"title":"Thriller","artist":"Michael Jackson","genre":"Pop","year":1982,"decade":1980,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/600x600bb.jpg","brightness":0.455,"saturation":0.193,"pct_dark":33.3,"pct_light":21.2,"dominant_color":"#76756e"},{"title":"Like a Virgin","artist":"Madonna","genre":"Pop","year":1984,"decade":1980,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/8e/80/32/8e803264-c925-14dd-3412-2d7652c3df7b/mzi.wxptosaa.jpg/600x600bb.jpg","brightness":0.468,"saturation":0.231,"pct_dark":22.3,"pct_light":13.6,"dominant_color":"#847369"},{"title":"...Baby One More Time","artist":"Britney Spears","genre":"Pop","year":1999,"decade":1990,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/51/73/28/5173280b-9b5e-c5e4-d3f8-a2612d044543/888880423368.jpg/600x600bb.jpg","brightness":0.647,"saturation":0.372,"pct_dark":1.9,"pct_light":34,"dominant_color":"#cf948b"},{"title":"Future Nostalgia","artist":"Dua Lipa","genre":"Pop","year":2020,"decade":2020,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/e9/c5/a8/e9c5a8a0-d698-137b-2e85-cf3a8d9548f8/190295303372.jpg/600x600bb.jpg","brightness":0.29,"saturation":0.441,"pct_dark":57.5,"pct_light":13.2,"dominant_color":"#504841"},{"title":"Illmatic","artist":"Nas","genre":"Hip-Hop","year":1994,"decade":1990,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/b9/eb/cc/b9ebccbc-5ba4-2cdb-5332-b065739abd9a/886444567619.jpg/600x600bb.jpg","brightness":0.363,"saturation":0.357,"pct_dark":12,"pct_light":0,"dominant_color":"#715648"},{"title":"Ready to Die","artist":"The Notorious B.I.G.","genre":"Hip-Hop","year":1994,"decade":1990,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f8/6a/3d/f86a3db0-d518-cd49-c0c9-25e767ae0a6d/075679456861.jpg/600x600bb.jpg","brightness":0.947,"saturation":0.03,"pct_dark":1.7,"pct_light":90.9,"dominant_color":"#f3f1f0"},{"title":"Graduation","artist":"Kanye West","genre":"Hip-Hop","year":2007,"decade":2000,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/39/25/2d/39252d65-2d50-b991-0962-f7a98a761271/00602517483507.rgb.jpg/600x600bb.jpg","brightness":0.458,"saturation":0.478,"pct_dark":4.1,"pct_light":7,"dominant_color":"#9a5f81"},{"title":"To Pimp a Butterfly","artist":"Kendrick Lamar","genre":"Hip-Hop","year":2015,"decade":2010,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/b5/a6/91/b5a69171-5232-3d5b-9c15-8963802f83dd/15UMGIM15814.rgb.jpg/600x600bb.jpg","brightness":0.572,"saturation":0.026,"pct_dark":10.2,"pct_light":22,"dominant_color":"#939191"},{"title":"Kind of Blue","artist":"Miles Davis","genre":"Jazz","year":1959,"decade":1950,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music/7f/9f/d6/mzi.vtnaewef.jpg/600x600bb.jpg","brightness":0.17,"saturation":0.116,"pct_dark":75.2,"pct_light":0.6,"dominant_color":"#2b2c2c"},{"title":"A Love Supreme","artist":"John Coltrane","genre":"Jazz","year":1965,"decade":1960,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e5/24/aa/e524aacd-467b-66f3-8931-0fcd6750a4b9/08UMGIM07914.rgb.jpg/600x600bb.jpg","brightness":0.352,"saturation":0.045,"pct_dark":26.9,"pct_light":4.2,"dominant_color":"#5a595b"},{"title":"Time Out","artist":"Dave Brubeck","genre":"Jazz","year":1959,"decade":1950,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/39/da/45/39da45ea-0a55-8668-0a84-4017b45fb13e/dj.rzbgoyft.jpg/600x600bb.jpg","brightness":0.587,"saturation":0.287,"pct_dark":2,"pct_light":26.8,"dominant_color":"#a1928d"},{"title":"The Epic","artist":"Kamasi Washington","genre":"Jazz","year":2015,"decade":2010,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/ee/f3/42/eef342b0-6024-1bb3-15db-426aa5ee1eb8/kw_1400.jpg/600x600bb.jpg","brightness":0.393,"saturation":0,"pct_dark":12.7,"pct_light":1.7,"dominant_color":"#646464"},{"title":"Discovery","artist":"Daft Punk","genre":"Electronic","year":2001,"decade":2000,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fd/4a/77/fd4a77db-0ebc-d043-41a2-f32fa1bb0fb4/dj.qrikkdwj.jpg/600x600bb.jpg","brightness":0.113,"saturation":0.466,"pct_dark":83.9,"pct_light":2.4,"dominant_color":"#1c1d1e"},{"title":"Trans-Europe Express","artist":"Kraftwerk","genre":"Electronic","year":1977,"decade":1970,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e2/80/bc/e280bcf9-4048-8c42-2b6b-d8b9c9bbed52/5099996602058_1500x1500_300dpi.jpg/600x600bb.jpg","brightness":0.127,"saturation":0,"pct_dark":84.3,"pct_light":8.7,"dominant_color":"#202020"},{"title":"Selected Ambient Works 85-92","artist":"Aphex Twin","genre":"Electronic","year":1992,"decade":1990,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5f/b3/e0/5fb3e08d-c2cd-3da4-6ad7-c5dc61803683/cover.jpg/600x600bb.jpg","brightness":0.709,"saturation":0,"pct_dark":24.4,"pct_light":66,"dominant_color":"#b5b5b5"},{"title":"Cross","artist":"Justice","genre":"Electronic","year":2007,"decade":2000,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/62/e4/01/62e40187-e672-17e5-f31f-9aee262703a3/mzi.bifzeufu.jpg/600x600bb.jpg","brightness":0.037,"saturation":0.782,"pct_dark":95.6,"pct_light":0,"dominant_color":"#0e060c"},{"title":"Paranoid","artist":"Black Sabbath","genre":"Metal","year":1970,"decade":1970,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/be/27/91/be279120-2285-16c6-c7ba-9d6643d4a948/075992732727.jpg/600x600bb.jpg","brightness":0.161,"saturation":0.338,"pct_dark":76.9,"pct_light":1.5,"dominant_color":"#33232c"},{"title":"Master of Puppets","artist":"Metallica","genre":"Metal","year":1986,"decade":1980,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0b/ae/59/0bae59f6-5ab8-3701-0446-a1ae31f9a5e6/9143_300dpi.jpg/600x600bb.jpg","brightness":0.315,"saturation":0.551,"pct_dark":38.3,"pct_light":1.8,"dominant_color":"#6b463d"},{"title":"The Number of the Beast","artist":"Iron Maiden","genre":"Metal","year":1982,"decade":1980,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1d/cb/ac/1dcbac1b-737d-b7c8-8bed-b5a98ae9df77/0881034134448.jpg/600x600bb.jpg","brightness":0.377,"saturation":0.284,"pct_dark":20.4,"pct_light":0.9,"dominant_color":"#6c5d51"},{"title":"Toxicity","artist":"System of a Down","genre":"Metal","year":2001,"decade":2000,"cover_url":"https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/83/68/f1/8368f10d-70d0-a968-69c2-0835dddf76d2/886448869788.jpg/600x600bb.jpg","brightness":0.107,"saturation":0.133,"pct_dark":75.8,"pct_light":0.5,"dominant_color":"#1e1b18"}];
 </script>
 <script src="timelapse.js"></script>
 

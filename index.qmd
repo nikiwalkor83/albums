@@ -13,69 +13,51 @@ We normally experience music through sound. What happens when we turn the visual
 #| label: setup
 library(tidyverse)
 
-# 15 albums arranged chronologically across 5 genres (3 each)
-albums <- tibble(
-  title = c(
-    "Blue Train",
-    "Kind of Blue",
-    "Time Out",
-    "Abbey Road",
-    "Led Zeppelin IV",
-    "The Dark Side of the Moon",
-    "Thriller",
-    "1999",
-    "True Blue",
-    "The Low End Theory",
-    "Selected Ambient Works 85-92",
-    "Illmatic",
-    "Dig Your Own Hole",
-    "Mezzanine",
-    "Stankonia"
-  ),
-  artist = c(
-    "John Coltrane",
-    "Miles Davis",
-    "The Dave Brubeck Quartet",
-    "The Beatles",
-    "Led Zeppelin",
-    "Pink Floyd",
-    "Michael Jackson",
-    "Prince",
-    "Madonna",
-    "A Tribe Called Quest",
-    "Aphex Twin",
-    "Nas",
-    "The Chemical Brothers",
-    "Massive Attack",
-    "OutKast"
-  ),
-  year = c(1958, 1959, 1959, 1969, 1971, 1973, 1982, 1982, 1986, 1991, 1992, 1994, 1997, 1998, 2000),
-  decade = c("1950s", "1950s", "1950s", "1960s", "1970s", "1970s", "1980s", "1980s", "1980s", "1990s", "1990s", "1990s", "1990s", "1990s", "2000s"),
-  genre = c(
-    "Jazz", "Jazz", "Jazz",
-    "Rock", "Rock", "Rock",
-    "Pop", "Pop", "Pop",
-    "Hip-Hop", "Electronic", "Hip-Hop", "Electronic", "Electronic", "Hip-Hop"
-  ),
-  cover_url = c(
-    "https://coverartarchive.org/release-group/c63baaaa-10c0-4b86-ad7e-1f39d7e2eccc/front-500",
-    "https://coverartarchive.org/release-group/8e8a594f-2175-38c7-a871-abb68ec363e7/front-500",
-    "https://coverartarchive.org/release-group/035a7881-3e2c-39d2-b110-fe26a4de94e5/front-500",
-    "https://coverartarchive.org/release-group/9162580e-5df4-32de-80cc-f45a8d8a9b1d/front-500",
-    "https://coverartarchive.org/release-group/2e61da88-39e9-3473-81d2-c964cb394952/front-500",
-    "https://coverartarchive.org/release-group/f5093c06-23e3-404f-aeaa-40f72885ee3a/front-500",
-    "https://coverartarchive.org/release-group/3a7817b5-22cb-32c3-a31b-2c8309fbf92e/front-500",
-    "https://coverartarchive.org/release-group/efc58986-193a-3cb2-9b81-abf8f29a6903/front-500",
-    "https://coverartarchive.org/release-group/91b6d637-d90b-356e-8c46-3face911be82/front-500",
-    "https://coverartarchive.org/release-group/c3733436-fcba-3c08-b082-d548df5c5139/front-500",
-    "https://coverartarchive.org/release-group/6842c81d-ea77-3dfd-abf7-4323add3f4d4/front-500",
-    "https://coverartarchive.org/release-group/28298e2c-4d70-3eed-a0f5-a3280c662b3d/front-500",
-    "https://coverartarchive.org/release-group/69f4aa7f-d760-3890-bd2a-902fb9abe40b/front-500",
-    "https://coverartarchive.org/release-group/6f9f6899-c0d3-311d-ae87-a10ae6bc53a9/front-500",
-    "https://coverartarchive.org/release-group/00d2cd53-21c9-3738-b683-56847b7b0040/front-500"
-  )
-)
+# Load the verified albums dataset with visual features
+albums <- read_csv("data/album_features.csv", show_col_types = FALSE)
 ```
+
+## Visual Map: Brightness vs. Saturation
+
+If we cannot hear the music, can we see patterns in its artwork? Here we plot each cover's **Brightness** (dark to light) against its **Saturation** (grayscale to vivid). Hover over any point to inspect the album.
+
+```{r}
+#| label: visual-map
+#| fig-width: 9
+#| fig-height: 5.5
+
+library(plotly)
+
+p <- ggplot(
+  albums,
+  aes(
+    x = brightness,
+    y = saturation,
+    color = genre,
+    text = paste0(
+      "<b>", title, "</b><br>",
+      artist, " (", year, ")<br>",
+      "Genre: ", genre, "<br>",
+      "Brightness: ", scales::percent(brightness, accuracy = 0.1), "<br>",
+      "Saturation: ", scales::percent(saturation, accuracy = 0.1)
+    )
+  )
+) +
+  geom_point(size = 3.5, alpha = 0.85) +
+  scale_x_continuous(labels = scales::percent, limits = c(0, 1)) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(
+    title = "Visual Map: Brightness vs. Saturation by Genre",
+    x = "Brightness (0% = Dark, 100% = Light)",
+    y = "Saturation (0% = Muted, 100% = Vivid)",
+    color = "Genre"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold"))
+
+ggplotly(p, tooltip = "text")
+```
+
 
 ## Album Explorer
 
@@ -86,7 +68,7 @@ Explore album covers across genres and decades.
 #| results: asis
 
 cards <- albums |>
-  pmap_chr(\(title, artist, genre, year, decade, cover_url) {
+  pmap_chr(\(title, artist, genre, year, decade, cover_url, ...) {
     paste0(
       '<div class="grid-card">',
       '<img src="', cover_url, '" alt="', htmltools::htmlEscape(title), '" loading="lazy">',
