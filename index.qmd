@@ -1,0 +1,8 @@
+---
+title: "Albums"
+format: html
+---
+
+## Welcome
+
+This is an analysis of albums.
