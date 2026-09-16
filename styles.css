@@ -1,1 +1,181 @@
-/* css styles */
+/* Custom styling for the album timelapse background */
+
+/* Fullscreen background container locked behind page content */
+#timelapse-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #0b0d13;
+}
+
+/* Three depth layers for 3D parallax feel */
+.bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.layer-deep {
+  opacity: 0.4;
+  filter: blur(1.5px) brightness(0.7);
+}
+
+.layer-mid {
+  opacity: 0.7;
+  filter: brightness(0.85);
+}
+
+.layer-front {
+  opacity: 0.95;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5));
+}
+
+/* Individual album card styling */
+.album-card {
+  position: absolute;
+  pointer-events: auto;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+  user-select: none;
+}
+
+.album-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.album-card:hover {
+  transform: scale(1.15) !important;
+  z-index: 50;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Calm center vignette overlay so content and headings remain readable */
+.timelapse-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 40%, rgba(11, 13, 19, 0.78) 0%, rgba(11, 13, 19, 0.55) 55%, rgba(11, 13, 19, 0.85) 100%);
+}
+
+/* Subtle decade ticker in the bottom corner */
+#decade-indicator {
+  position: fixed;
+  bottom: 24px;
+  right: 32px;
+  z-index: 10;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Make foreground page content sit nicely above the overlay */
+.quarto-title-banner, #quarto-content, .navbar {
+  position: relative;
+  z-index: 1;
+}
+
+/* Modal detail card when an album is clicked */
+#album-detail-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: rgba(18, 22, 32, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  z-index: 100;
+  max-width: 360px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+#album-detail-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Album Explorer Grid */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.grid-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.grid-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.grid-info {
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.grid-info strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid-info span {
+  display: block;
+  color: #aaa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid-info small {
+  color: #888;
+}
+
